@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrendCaption - مولد كابشن وهاشتاغات</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="hero">
+            <div class="logo">🔥 TrendCaption</div>
+
+            <h1>خلّي فيديوك يترند 🚀</h1>
+
+            <p>
+                اكتب موضوع الفيديو وخلي TrendCaption يعطيك
+                Hook + Caption + Hashtags جاهزين للنسخ.
+            </p>
+        </header>
+
+        <section class="generator">
+
+            <label for="topic">شنوّة موضوع الفيديو؟</label>
+
+            <textarea
+                id="topic"
+                placeholder="مثلاً: Free Fire، كرة القدم، السفر..."
+                maxlength="200"></textarea>
+
+            <label for="platform">المنصة</label>
+
+            <select id="platform">
+                <option value="tiktok">TikTok</option>
+                <option value="instagram">Instagram</option>
+                <option value="youtube">YouTube Shorts</option>
+            </select>
+
+            <button id="generateBtn">
+                🚀 Generate
+            </button>
+
+        </section>
+
+        <section id="results" class="results hidden">
+
+            <div class="result-box">
+                <div class="result-title">
+                    🎯 Hook
+                    <button onclick="copyText('hook')">📋</button>
+                </div>
+                <p id="hook"></p>
+            </div>
+
+            <div class="result-box">
+                <div class="result-title">
+                    ✍️ Caption
+                    <button onclick="copyText('caption')">📋</button>
+                </div>
+                <p id="caption"></p>
+            </div>
+
+            <div class="result-box">
+                <div class="result-title">
+                    #️⃣ Hashtags
+                    <button onclick="copyText('hashtags')">📋</button>
+                </div>
+                <p id="hashtags"></p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>TrendCaption © 2026</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+                  </html>
