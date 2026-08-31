@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #0b0b12;
+    color: #fff;
+    padding: 25px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* العنوان */
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* صندوق المولد */
+.generator {
+    background: #15151f;
+    padding: 22px;
+    border-radius: 20px;
+    border: 1px solid #292936;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.generator label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+textarea,
+select {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 18px;
+    background: #0d0d14;
+    color: #fff;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+textarea::placeholder {
+    color: #777;
+}
+
+/* زر Generate */
+#generateBtn {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #7c3aed;
+    color: white;
+    transition: 0.2s;
+}
+
+#generateBtn:hover {
+    transform: translateY(-2px);
+}
+
+#generateBtn:active {
+    transform: scale(0.97);
+}
+
+/* النتائج */
+.results {
+    margin-top: 22px;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-box {
+    background: #15151f;
+    border: 1px solid #292936;
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 14px;
+}
+
+.result-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.result-title button {
+    border: none;
+    background: #292936;
+    color: white;
+    border-radius: 8px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.result-box p {
+    color: #ddd;
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* الهاتف */
+@media (max-width: 480px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
