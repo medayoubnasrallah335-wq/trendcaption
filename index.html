@@ -8,6 +8,10 @@
     <title>TrendCaption 🔥 مولد المحتوى الفيرال</title>
 
     <link rel="stylesheet" href="./style.css">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ff4081">
 </head>
 
 <body>
@@ -24,6 +28,7 @@
                 مناسبة لمحتواك في ثواني.
             </p>
         </header>
+
 
         <!-- GENERATOR -->
 
@@ -255,6 +260,37 @@
 
 
     <script src="./script.js"></script>
+
+
+    <!-- PWA SERVICE WORKER -->
+
+    <script>
+        if ("serviceWorker" in navigator) {
+
+            window.addEventListener("load", function () {
+
+                navigator.serviceWorker
+                    .register("./service-worker.js")
+                    .then(function () {
+
+                        console.log(
+                            "TrendCaption PWA ready 🚀"
+                        );
+
+                    })
+                    .catch(function (error) {
+
+                        console.log(
+                            "PWA error:",
+                            error
+                        );
+
+                    });
+
+            });
+
+        }
+    </script>
 
 </body>
 
