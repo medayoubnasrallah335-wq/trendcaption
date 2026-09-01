@@ -303,3 +303,48 @@ footer {
         flex: 1 1 auto;
     }
         }
+/* BRAND FOOTER */
+
+.brand-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-footer strong {
+    font-size: 20px;
+    color: #ff4081;
+}
+
+.brand-footer span {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.brand-footer a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: #29292f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.brand-footer a:hover {
+    background: #ff4081;
+    transform: translateY(-2px);
+}
+
+.brand-footer small {
+    color: #777;
+    margin-top: 5px;
+        }
