@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TrendCaption - مولد كابشن وهاشتاغات</title>
+    <title>TrendCaption - مولد المحتوى الفيرال</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
                 <option value="youtube">YouTube Shorts</option>
             </select>
 
-            <button id="generateBtn">
+            <button id="generateBtn" type="button">
                 🚀 Generate
             </button>
 
@@ -52,7 +53,7 @@
             <div class="result-box">
                 <div class="result-title">
                     🎯 Hook
-                    <button onclick="copyText('hook')">📋</button>
+                    <button type="button" onclick="copyText('hook')">📋</button>
                 </div>
                 <p id="hook"></p>
             </div>
@@ -60,7 +61,7 @@
             <div class="result-box">
                 <div class="result-title">
                     ✍️ Caption
-                    <button onclick="copyText('caption')">📋</button>
+                    <button type="button" onclick="copyText('caption')">📋</button>
                 </div>
                 <p id="caption"></p>
             </div>
@@ -68,10 +69,25 @@
             <div class="result-box">
                 <div class="result-title">
                     #️⃣ Hashtags
-                    <button onclick="copyText('hashtags')">📋</button>
+                    <button type="button" onclick="copyText('hashtags')">📋</button>
                 </div>
                 <p id="hashtags"></p>
             </div>
+
+            <div class="result-box viral-box">
+                <div class="result-title">
+                    📊 Viral Score
+                    <span id="viralScore">0/100</span>
+                </div>
+
+                <p id="viralMessage">
+                    ولّد المحتوى باش تشوف التقييم 🔥
+                </p>
+            </div>
+
+            <button id="copyAllBtn" type="button">
+                📋 Copy All
+            </button>
 
         </section>
 
@@ -81,7 +97,7 @@
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
-                  </html>
+</html>
