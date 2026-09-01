@@ -60,3 +60,10 @@ function cleanTag(text) {
 
 function copyText(id) {
     const text = document.getElementById(id).textContent;
+
+    navigator.clipboard.writeText(text).then(() => {
+        alert("✅ تم النسخ!");
+    }).catch(() => {
+        alert("❌ ما نجّمش ننسخ النص");
+    });
+}
