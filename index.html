@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TrendCaption - مولد المحتوى الفيرال</title>
+    <title>TrendCaption 🔥 مولد المحتوى الفيرال</title>
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -20,84 +20,242 @@
             <h1>خلّي فيديوك يترند 🚀</h1>
 
             <p>
-                اكتب موضوع الفيديو وخلي TrendCaption يعطيك
-                Hook + Caption + Hashtags جاهزين للنسخ.
+                اصنع Hook و Caption و Hashtags
+                مناسبة لمحتواك في ثواني.
             </p>
         </header>
 
+        <!-- GENERATOR -->
+
         <section class="generator">
 
-            <label for="topic">شنوّة موضوع الفيديو؟</label>
+            <label for="topic">🎯 موضوع الفيديو</label>
 
             <textarea
                 id="topic"
                 placeholder="مثلاً: Free Fire، كرة القدم، السفر..."
                 maxlength="200"></textarea>
 
-            <label for="platform">المنصة</label>
 
-            <select id="platform">
-                <option value="tiktok">TikTok</option>
-                <option value="instagram">Instagram</option>
-                <option value="youtube">YouTube Shorts</option>
+            <label for="category">🔥 نوع المحتوى</label>
+
+            <select id="category">
+
+                <option value="general">🔥 Trending</option>
+                <option value="gaming">🎮 Gaming</option>
+                <option value="football">⚽ Football</option>
+                <option value="funny">😂 Funny</option>
+                <option value="music">🎵 Music</option>
+                <option value="money">💰 Money</option>
+                <option value="love">❤️ Love</option>
+
             </select>
 
+
+            <label for="language">🌍 اللغة</label>
+
+            <select id="language">
+
+                <option value="tunisian">🇹🇳 تونسي</option>
+                <option value="arabic">🇦🇪 عربي</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="french">🇫🇷 Français</option>
+
+            </select>
+
+
+            <label for="hookStyle">🧠 نوع الـ Hook</label>
+
+            <select id="hookStyle">
+
+                <option value="curiosity">👀 فضول</option>
+                <option value="shock">😱 صدمة</option>
+                <option value="funny">😂 مضحك</option>
+                <option value="story">📖 قصة</option>
+                <option value="question">❓ سؤال</option>
+
+            </select>
+
+
+            <label for="platform">📱 المنصة</label>
+
+            <select id="platform">
+
+                <option value="tiktok">TikTok</option>
+                <option value="instagram">Instagram Reels</option>
+                <option value="youtube">YouTube Shorts</option>
+
+            </select>
+
+
             <button id="generateBtn" type="button">
-                🚀 Generate
+                🚀 Generate Viral Content
             </button>
 
         </section>
 
+
+        <!-- QUICK TOPICS -->
+
+        <section class="quick-topics">
+
+            <h2>🔥 أفكار سريعة</h2>
+
+            <div class="topic-buttons">
+
+                <button type="button" onclick="setTopic('Free Fire')">
+                    🎮 Free Fire
+                </button>
+
+                <button type="button" onclick="setTopic('كرة القدم')">
+                    ⚽ كرة القدم
+                </button>
+
+                <button type="button" onclick="setTopic('ترند اليوم')">
+                    🔥 ترند اليوم
+                </button>
+
+                <button type="button" onclick="setTopic('موسيقى')">
+                    🎵 Music
+                </button>
+
+                <button type="button" onclick="setTopic('فلوس ونجاح')">
+                    💰 Money
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
         <section id="results" class="results hidden">
 
-            <div class="result-box">
-                <div class="result-title">
-                    🎯 Hook
-                    <button type="button" onclick="copyText('hook')">📋</button>
-                </div>
-                <p id="hook"></p>
-            </div>
 
-            <div class="result-box">
-                <div class="result-title">
-                    ✍️ Caption
-                    <button type="button" onclick="copyText('caption')">📋</button>
-                </div>
-                <p id="caption"></p>
-            </div>
-
-            <div class="result-box">
-                <div class="result-title">
-                    #️⃣ Hashtags
-                    <button type="button" onclick="copyText('hashtags')">📋</button>
-                </div>
-                <p id="hashtags"></p>
-            </div>
+            <!-- VIRAL SCORE -->
 
             <div class="result-box viral-box">
+
                 <div class="result-title">
                     📊 Viral Score
-                    <span id="viralScore">0/100</span>
+                </div>
+
+                <div id="viralScore">
+                    0/100
                 </div>
 
                 <p id="viralMessage">
                     ولّد المحتوى باش تشوف التقييم 🔥
                 </p>
+
             </div>
 
-            <button id="copyAllBtn" type="button">
+
+            <!-- HOOK -->
+
+            <div class="result-box">
+
+                <div class="result-title">
+
+                    🎯 Hook
+
+                    <button
+                        type="button"
+                        onclick="copyText('hook')">
+                        📋
+                    </button>
+
+                </div>
+
+                <p id="hook"></p>
+
+            </div>
+
+
+            <!-- CAPTION -->
+
+            <div class="result-box">
+
+                <div class="result-title">
+
+                    ✍️ Caption
+
+                    <button
+                        type="button"
+                        onclick="copyText('caption')">
+                        📋
+                    </button>
+
+                </div>
+
+                <p id="caption"></p>
+
+            </div>
+
+
+            <!-- HASHTAGS -->
+
+            <div class="result-box">
+
+                <div class="result-title">
+
+                    #️⃣ Hashtags
+
+                    <button
+                        type="button"
+                        onclick="copyText('hashtags')">
+                        📋
+                    </button>
+
+                </div>
+
+                <p id="hashtags"></p>
+
+            </div>
+
+
+            <!-- COPY ALL -->
+
+            <button
+                id="copyAllBtn"
+                type="button">
+
                 📋 Copy All
+
+            </button>
+
+
+            <!-- GENERATE AGAIN -->
+
+            <button
+                id="generateAgainBtn"
+                type="button">
+
+                🔄 Generate Again
+
             </button>
 
         </section>
 
+
         <footer>
-            <p>TrendCaption © 2026</p>
+
+            <p>
+                TrendCaption © 2026
+            </p>
+
+            <p>
+                Made with 🔥 for creators
+            </p>
+
         </footer>
 
     </main>
 
+
     <script src="./script.js"></script>
 
 </body>
-</html>
+
+                    </html>
