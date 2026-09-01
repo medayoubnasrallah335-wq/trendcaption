@@ -2,23 +2,27 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
     background:
-        radial-gradient(circle at top, #2a0a3d 0%, #111 45%, #050505 100%);
-    color: white;
+        radial-gradient(circle at 50% 0%, #3a0b4f 0%, #111 38%, #050505 100%);
+    color: #fff;
     font-family: Arial, sans-serif;
 }
 
 .container {
     width: 100%;
-    max-width: 520px;
+    max-width: 540px;
     margin: auto;
-    padding: 25px 18px 35px;
+    padding: 25px 16px 40px;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero {
     text-align: center;
@@ -27,39 +31,39 @@ body {
 
 .logo {
     display: inline-block;
-    font-size: 27px;
-    font-weight: bold;
-    padding: 10px 18px;
+    padding: 10px 20px;
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 0 25px rgba(255, 60, 150, 0.15);
+    font-size: 26px;
+    font-weight: bold;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 0 30px rgba(255,50,150,.15);
 }
 
 h1 {
-    font-size: 32px;
-    margin: 22px 0 10px;
+    font-size: 31px;
+    margin: 20px 0 10px;
 }
 
 .hero p {
-    color: #bdbdbd;
+    color: #bbb;
     line-height: 1.8;
     font-size: 15px;
 }
 
-/* ===== GENERATOR ===== */
+/* GENERATOR */
 
 .generator {
-    background: rgba(28, 28, 32, 0.9);
     padding: 20px;
     border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+    background: rgba(25,25,30,.94);
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 15px 45px rgba(0,0,0,.35);
 }
 
 label {
     display: block;
-    margin: 12px 0 8px;
+    margin: 14px 0 8px;
     font-weight: bold;
 }
 
@@ -71,53 +75,84 @@ select {
     border-radius: 14px;
     padding: 14px;
     font-size: 16px;
-    background: #29292e;
+    background: #29292f;
     color: white;
-    transition: 0.25s;
+    transition: .25s;
 }
 
 textarea {
-    min-height: 115px;
+    min-height: 110px;
     resize: vertical;
 }
 
 textarea:focus,
 select:focus {
-    border-color: #ff3b81;
-    box-shadow: 0 0 15px rgba(255, 59, 129, 0.15);
+    border-color: #ff4081;
+    box-shadow: 0 0 18px rgba(255,64,129,.15);
 }
 
-/* ===== GENERATE BUTTON ===== */
+/* GENERATE */
 
 #generateBtn {
     width: 100%;
-    margin-top: 18px;
+    margin-top: 20px;
     padding: 16px;
     border: none;
     border-radius: 14px;
-    background: linear-gradient(135deg, #ff1744, #ff4081);
+    background: linear-gradient(135deg,#ff1744,#ff4081);
     color: white;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 8px 25px rgba(255, 23, 68, 0.25);
-    transition: 0.2s;
+    box-shadow: 0 8px 25px rgba(255,23,68,.3);
+    transition: .2s;
 }
 
 #generateBtn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(255, 23, 68, 0.35);
 }
 
 #generateBtn:active {
-    transform: scale(0.96);
+    transform: scale(.96);
 }
 
-/* ===== RESULTS ===== */
+/* QUICK TOPICS */
+
+.quick-topics {
+    margin-top: 20px;
+}
+
+.quick-topics h2 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.topic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.topic-buttons button {
+    border: 1px solid rgba(255,255,255,.1);
+    background: #202025;
+    color: white;
+    padding: 10px 13px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.topic-buttons button:hover {
+    background: #ff4081;
+    transform: translateY(-2px);
+}
+
+/* RESULTS */
 
 .results {
     margin-top: 22px;
-    animation: showResults 0.5s ease;
+    animation: showResults .5s ease;
 }
 
 .hidden {
@@ -125,12 +160,12 @@ select:focus {
 }
 
 .result-box {
-    background: rgba(28, 28, 32, 0.95);
+    background: rgba(25,25,30,.96);
     margin-bottom: 15px;
     padding: 18px;
     border-radius: 17px;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255,255,255,.07);
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
 }
 
 .result-title {
@@ -148,7 +183,7 @@ select:focus {
     border-radius: 9px;
     padding: 8px 11px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: .2s;
 }
 
 .result-title button:hover {
@@ -162,7 +197,7 @@ select:focus {
     word-break: break-word;
 }
 
-/* ===== VIRAL SCORE ===== */
+/* VIRAL SCORE */
 
 .viral-box {
     text-align: center;
@@ -170,58 +205,72 @@ select:focus {
 
 .viral-box .result-title {
     justify-content: center;
-    gap: 12px;
 }
 
 #viralScore {
-    font-size: 25px;
+    margin-top: 10px;
+    font-size: 38px;
     font-weight: bold;
     color: #ff4081;
+    text-shadow: 0 0 20px rgba(255,64,129,.35);
 }
 
 #viralMessage {
     color: #bbb;
 }
 
-/* ===== COPY ALL ===== */
+/* COPY ALL */
 
-#copyAllBtn {
+#copyAllBtn,
+#generateAgainBtn {
     width: 100%;
     padding: 15px;
+    margin-bottom: 12px;
     border: none;
     border-radius: 14px;
-    background: linear-gradient(135deg, #7b2cff, #a855f7);
     color: white;
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 0 8px 25px rgba(123, 44, 255, 0.25);
+    transition: .2s;
 }
 
-#copyAllBtn:hover {
+#copyAllBtn {
+    background: linear-gradient(135deg,#7b2cff,#a855f7);
+    box-shadow: 0 8px 25px rgba(123,44,255,.25);
+}
+
+#generateAgainBtn {
+    background: #29292f;
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+#copyAllBtn:hover,
+#generateAgainBtn:hover {
     transform: translateY(-2px);
 }
 
-#copyAllBtn:active {
-    transform: scale(0.96);
+#copyAllBtn:active,
+#generateAgainBtn:active {
+    transform: scale(.97);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 footer {
     text-align: center;
     margin-top: 30px;
     color: #777;
     font-size: 13px;
+    line-height: 1.7;
 }
 
-/* ===== ANIMATION ===== */
+/* ANIMATION */
 
 @keyframes showResults {
     from {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(18px);
     }
 
     to {
@@ -230,12 +279,12 @@ footer {
     }
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 
 @media (max-width: 400px) {
 
     .container {
-        padding: 20px 14px 30px;
+        padding: 20px 13px 30px;
     }
 
     h1 {
@@ -249,4 +298,8 @@ footer {
     .generator {
         padding: 16px;
     }
+
+    .topic-buttons button {
+        flex: 1 1 auto;
     }
+        }
